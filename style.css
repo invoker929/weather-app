@@ -23,7 +23,7 @@ body {
 .container {
   background-color: #fff;
   max-width: 600px;
-  margin: 3rem auto;
+  margin: 3rem auto 0;
   padding: 1.5rem;
   border-radius: 5px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
@@ -37,7 +37,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1rem;
 }
 
 form input[type="text"] {
@@ -56,11 +56,15 @@ form input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-out;
 }
 
 form input[type="submit"]:hover {
   background-color: #0062cc;
+}
+
+form input[type="submit"]:active {
+  transform: scale(0.8);
 }
 
 .icon img {
@@ -104,5 +108,18 @@ form input[type="submit"]:hover {
   form input[type="text"] {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 265px) {
+  .container {
+    margin: 0;
+    box-shadow: none;
   }
 }
